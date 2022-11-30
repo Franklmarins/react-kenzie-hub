@@ -38,8 +38,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Inter", sans-serif;
   }
   
-
-
 :root {
   --color-primary: #FF577F;
   --color-primary-50: #FF427F;
@@ -54,8 +52,9 @@ export const GlobalStyle = createGlobalStyle`
   --sucess: #3FE864;
   --negative: #E83F5B;
   
-  --font-size-1: 1rem; /* 16px */
-  --font-size-2: 0.75rem; /* 12px */
+  --font-size-1: 1.125rem; /* 18px */
+  --font-size-2: 1rem; /* 16px */
+  --font-size-3: 0.75rem; /* 12px */
 
   --font-weight-1: 700;
   --font-weight-2: 400;
