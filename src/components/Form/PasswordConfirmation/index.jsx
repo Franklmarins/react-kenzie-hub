@@ -1,10 +1,11 @@
 import React from "react";
+import { StyledInput } from "../../Input/style";
 
 const InputPassConfirmation = ({ errors, register }) => {
   return (
     <label>
       Confirmar senha
-      <input
+      <StyledInput
         type="password"
         placeholder="Digite novamente sua senha"
         {...register("passwordConfirmation")}

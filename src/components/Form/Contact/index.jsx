@@ -1,10 +1,11 @@
 import React from "react";
+import { StyledInput } from "../../Input/style";
 
 const InputContact = ({ errors, register }) => {
   return (
     <label>
       Contato
-      <input
+      <StyledInput
         type="text"
         placeholder="Digite o seu telefone"
         {...register("contact")}

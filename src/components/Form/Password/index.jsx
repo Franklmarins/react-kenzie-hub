@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledInput } from "../../Input";
+import { StyledInput } from "../../Input/style";
 
 const InputPassword = ({ errors, register }) => {
   return (

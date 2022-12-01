@@ -2,8 +2,8 @@ import React from "react";
 import Form from "./../../components/Form";
 import { Container } from "../../styles/Container";
 import logo from "./../../assets/Logo.svg";
-import { Link } from "react-router-dom";
 import { StyledLogin } from "./style";
+import { StyledLink } from "../../components/Link/style";
 
 export const Login = () => {
   return (
@@ -14,7 +14,9 @@ export const Login = () => {
           <h2>Login</h2>
           <Form />
           <span>Ainda não possui uma conta?</span>
-          <Link to="/register">Cadastre-se</Link>
+          <StyledLink to="/register" stylelink="grey-solid">
+            Cadastre-se
+          </StyledLink>
         </div>
       </StyledLogin>
     </Container>

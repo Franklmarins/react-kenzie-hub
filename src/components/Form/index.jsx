@@ -14,6 +14,7 @@ import SelectModule from "./Module";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { api } from "../../services/api";
+import { StyledButton } from "../Button/style";
 
 const Form = () => {
   const local = useLocation();
@@ -23,6 +24,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm(
     local.pathname === "/login"
       ? {
@@ -50,6 +52,7 @@ const Form = () => {
               localStorage.clear();
               localStorage.setItem("token", data.token);
               localStorage.setItem("userID", data.user.id);
+              reset();
               navigate("/dashboard");
               return `Olá ${data.user.name}, seja bem-vindo! 👌`;
             },
@@ -69,13 +72,13 @@ const Form = () => {
         {
           pending: {
             render() {
-              return "Carregando...";
+              return "Cadastrando...";
             },
           },
           success: {
             render() {
               navigate("/login");
-              return "Conta criada com sucesso!";
+              return "Cadastro realizado com sucesso!";
             },
           },
           error: {
@@ -93,7 +96,9 @@ const Form = () => {
       <StyledForm onSubmit={handleSubmit(submit)}>
         <InputEmail errors={errors} register={register} />
         <InputPassword errors={errors} register={register} />
-        <button type="submit">Enviar</button>
+        <StyledButton type="submit" buttonStyle="primary-solid">
+          Entrar
+        </StyledButton>
       </StyledForm>
     );
 
@@ -106,7 +111,9 @@ const Form = () => {
       <InputBio errors={errors} register={register} />
       <InputContact errors={errors} register={register} />
       <SelectModule errors={errors} register={register} />
-      <button type="submit">Enviar</button>
+      <StyledButton type="submit" buttonStyle="primary-solid">
+        Enviar
+      </StyledButton>
     </StyledForm>
   );
 };

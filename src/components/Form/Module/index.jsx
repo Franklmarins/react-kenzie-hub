@@ -1,10 +1,11 @@
 import React from "react";
+import { StyledSelect } from "../../Select/style";
 
 const SelectModule = ({ errors, register }) => {
   return (
     <label>
       Selecionar módulo
-      <select {...register("course_module")}>
+      <StyledSelect {...register("course_module")}>
         <option value="Primeiro módulo (Introdução ao Frontend)">
           Primeiro módulo (Introdução ao Frontend)
         </option>
@@ -17,7 +18,7 @@ const SelectModule = ({ errors, register }) => {
         <option value="Quarto módulo (Backend Avançado)">
           Quarto módulo (Backend Avançado)
         </option>
-      </select>
+      </StyledSelect>
       {errors.course_module?.message && (
         <span>{errors.course_module.message}</span>
       )}
