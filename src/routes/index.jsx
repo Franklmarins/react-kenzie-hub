@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Dashboard } from "../pages/Dashboard";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";

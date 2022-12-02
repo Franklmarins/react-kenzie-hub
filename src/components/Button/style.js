@@ -45,9 +45,15 @@ export const StyledButton = styled.button`
 
       case "plus":
         return css`
+          padding: 0;
           width: 32px;
           height: 32px;
+          font-size: var(--font-size-1);
+          font-weight: var(--font-weight-1);
           background: var(--grey-3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
           &:hover {
             background: var(--grey-2);
           }

@@ -6,15 +6,15 @@ import StyledForm from "./style";
 import { formSchemaRegister, formSchemaLogin } from "./formSchema";
 import InputEmail from "./Email";
 import InputPassword from "./Password";
-import { InputName } from "./Name";
+import InputName from "./Name";
 import InputPassConfirmation from "./PasswordConfirmation";
 import InputBio from "./Bio";
 import InputContact from "./Contact";
-import SelectModule from "./Module";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { api } from "../../services/api";
-import { StyledButton } from "../Button/style";
+import Button from "../Button";
+import SelectModule from "./Module";
 
 const Form = () => {
   const local = useLocation();
@@ -96,9 +96,7 @@ const Form = () => {
       <StyledForm onSubmit={handleSubmit(submit)}>
         <InputEmail errors={errors} register={register} />
         <InputPassword errors={errors} register={register} />
-        <StyledButton type="submit" buttonStyle="primary-solid">
-          Entrar
-        </StyledButton>
+        <Button type="submit" buttonStyle="primary-solid" value="Entrar" />
       </StyledForm>
     );
 
@@ -111,9 +109,7 @@ const Form = () => {
       <InputBio errors={errors} register={register} />
       <InputContact errors={errors} register={register} />
       <SelectModule errors={errors} register={register} />
-      <StyledButton type="submit" buttonStyle="primary-solid">
-        Enviar
-      </StyledButton>
+      <Button type="submit" buttonStyle="primary-solid" value="Enviar" />
     </StyledForm>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledInput } from "../../Input/style";
 
-export const InputName = ({ errors, register }) => {
+const InputName = ({ errors, register }) => {
   return (
     <label>
       Nome
@@ -14,3 +14,5 @@ export const InputName = ({ errors, register }) => {
     </label>
   );
 };
+
+export default InputName;

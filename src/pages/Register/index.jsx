@@ -5,6 +5,7 @@ import { Container } from "../../styles/Container";
 import { StyledRegister } from "./style";
 import { StyledLink } from "../../components/Link/style";
 import { useNavigate } from "react-router-dom";
+import ComponentLink from "../../components/Link";
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -15,9 +16,11 @@ export const Register = () => {
         <StyledRegister>
           <div>
             <img src={logo} alt="Kenzie Hub logo" />
-            <StyledLink to={navigate(-1)} stylelink="grey-2-solid">
-              Voltar
-            </StyledLink>
+            <ComponentLink
+              to={navigate("/login")}
+              stylelink="grey-2-solid"
+              value="Voltar"
+            />
           </div>
           <div>
             <h2>Crie sua conta</h2>

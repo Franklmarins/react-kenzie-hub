@@ -4,6 +4,7 @@ import { Container } from "../../styles/Container";
 import logo from "./../../assets/Logo.svg";
 import { StyledLogin } from "./style";
 import { StyledLink } from "../../components/Link/style";
+import ComponentLink from "../../components/Link";
 
 export const Login = () => {
   return (
@@ -14,9 +15,11 @@ export const Login = () => {
           <h2>Login</h2>
           <Form />
           <span>Ainda não possui uma conta?</span>
-          <StyledLink to="/register" stylelink="grey-solid">
-            Cadastre-se
-          </StyledLink>
+          <ComponentLink
+            to="/register"
+            stylelink="grey-solid"
+            value="Cadastre-se"
+          />
         </div>
       </StyledLogin>
     </Container>
