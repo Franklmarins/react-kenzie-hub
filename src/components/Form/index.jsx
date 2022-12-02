@@ -96,7 +96,7 @@ const Form = () => {
       <StyledForm onSubmit={handleSubmit(submit)}>
         <InputEmail errors={errors} register={register} />
         <InputPassword errors={errors} register={register} />
-        <Button type="submit" buttonStyle="primary-solid" value="Entrar" />
+        <Button type="submit" buttonStyle="primary-solid" name="Entrar" />
       </StyledForm>
     );
 
@@ -109,7 +109,7 @@ const Form = () => {
       <InputBio errors={errors} register={register} />
       <InputContact errors={errors} register={register} />
       <SelectModule errors={errors} register={register} />
-      <Button type="submit" buttonStyle="primary-solid" value="Enviar" />
+      <Button type="submit" buttonStyle="primary-solid" name="Enviar" />
     </StyledForm>
   );
 };

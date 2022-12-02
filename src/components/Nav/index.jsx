@@ -33,10 +33,10 @@ const Nav = () => {
         <div>
           <img src={logo} alt="kenzieHubLogo" />
           <Button
-            onClick={logOut}
+            logOut={logOut}
             type="button"
             buttonStyle="medium-solid"
-            value="sair"
+            name="sair"
           />
         </div>
       </Container>
