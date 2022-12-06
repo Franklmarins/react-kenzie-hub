@@ -12,7 +12,7 @@ const Header = () => {
 
     api
       .get("profile", { headers: { Authorization: `Bearer ${token}` } })
-      .then(function (response) {
+      .then((response) => {
         setUserName(response.data.name);
         setCourseModule(response.data.course_module);
       });

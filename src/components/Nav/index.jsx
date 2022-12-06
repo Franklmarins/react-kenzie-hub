@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Container } from "../../styles/Container";
 import Button from "../Button";
-import { StyledButton } from "../Button/style";
 import logo from "./../../assets/Logo.svg";
 import { StyledNav } from "./style";
 
 const Nav = () => {
   const navigate = useNavigate();
 
-  function logOut() {
+  const logOut = () => {
     localStorage.clear();
 
     toast.info("Deslogado com sucesso!", {
@@ -25,7 +24,7 @@ const Nav = () => {
     });
 
     navigate("/login");
-  }
+  };
 
   return (
     <StyledNav>

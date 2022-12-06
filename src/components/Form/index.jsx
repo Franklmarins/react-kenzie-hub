@@ -38,7 +38,7 @@ const Form = () => {
   const submit = (data) => {
     if (local.pathname === "/login") {
       toast.promise(
-        api.post("/sessions", data).then(function (response) {
+        api.post("/sessions", data).then((response) => {
           return response.data;
         }),
         {
@@ -66,7 +66,7 @@ const Form = () => {
       );
     } else {
       toast.promise(
-        api.post("users", data).then(function (response) {
+        api.post("users", data).then((response) => {
           return response.data;
         }),
         {

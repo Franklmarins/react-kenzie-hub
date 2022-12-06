@@ -34,7 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   span,
   li,
   button,
-  input {
+  input,
+  label {
     font-family: "Inter", sans-serif;
   }
   
