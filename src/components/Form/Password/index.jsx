@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../../contexts/userContext";
 import { StyledInput } from "../../Input/style";
 
-const InputPassword = ({ errors, register }) => {
+const InputPassword = () => {
+  const { register, errors } = useContext(UserContext);
   return (
     <label>
       Senha

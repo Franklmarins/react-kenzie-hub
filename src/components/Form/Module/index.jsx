@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyledSelect } from "../../Select/style";
+import { UserContext } from "../../../contexts/userContext";
 
-const SelectModule = ({ errors, register }) => {
+const SelectModule = () => {
+  const { register, errors } = useContext(UserContext);
   return (
     <label>
       Selecionar módulo

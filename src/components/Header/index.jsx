@@ -1,29 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { api } from "../../services/api";
+import React from "react";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/userContext";
 import { Container } from "../../styles/Container";
 import { StyledHeader } from "./style";
 
 const Header = () => {
-  const [userName, setUserName] = useState("");
-  const [courseModule, setCourseModule] = useState("");
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    api
-      .get("profile", { headers: { Authorization: `Bearer ${token}` } })
-      .then((response) => {
-        setUserName(response.data.name);
-        setCourseModule(response.data.course_module);
-      });
-  }, []);
+  const { user } = useContext(UserContext);
 
   return (
     <StyledHeader>
       <Container>
         <div>
-          <h1>Olá, {userName}</h1>
-          <span>{courseModule}</span>
+          <h1>Olá, {user.name} </h1>
+          <span>{user.course_module}</span>
         </div>
       </Container>
     </StyledHeader>

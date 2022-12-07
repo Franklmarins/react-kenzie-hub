@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../../contexts/userContext";
 import { StyledInput } from "../../Input/style";
 
-const InputName = ({ errors, register }) => {
+const InputName = () => {
+  const { register, errors } = useContext(UserContext);
   return (
     <label>
       Nome
