@@ -3,7 +3,6 @@ import Form from "./../../components/Form";
 import { Container } from "../../styles/Container";
 import logo from "./../../assets/Logo.svg";
 import { StyledLogin } from "./style";
-import { StyledLink } from "../../components/Link/style";
 import ComponentLink from "../../components/Link";
 
 export const Login = () => {

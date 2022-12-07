@@ -6,5 +6,5 @@ export const Home = () => {
 
   useEffect(() => {
     navigate("/login");
-  }, []);
+  }, [navigate]);
 };

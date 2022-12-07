@@ -12,11 +12,32 @@ export const StyledModal = styled.div`
   left: 0;
 
   > div {
-    padding: 32px 22px;
-    background-color: var(--grey-4);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey-3);
     position: relative;
     width: auto;
     height: auto;
     border-radius: 4px;
+  }
+  > div > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 370px;
+    padding: 12px 20px;
+    background: var(--grey-2);
+    border-radius: 4px 4px 0 0;
+
+    > h3 {
+      font-size: var(--font-size-2);
+      font-weight: var(--font-weight-1);
+      color: var(--grey-0);
+    }
+    > button {
+      font-size: var(--font-size-2);
+      font-weight: var(--font-weight-2);
+      color: var(--grey-1);
+    }
   }
 `;

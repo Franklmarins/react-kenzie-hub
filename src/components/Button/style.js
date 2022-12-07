@@ -32,6 +32,13 @@ export const StyledButton = styled.button`
             background: var(---grey-1);
           }
         `;
+      case "grey-solid-2":
+        return css`
+          background: var(--grey-2);
+          &:hover {
+            background: var(--grey-1);
+          }
+        `;
       case "medium-solid":
         return css`
           height: 32px;

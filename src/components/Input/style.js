@@ -15,6 +15,10 @@ export const StyledInput = styled.input`
 
   color: var(--grey-1);
 
+  :disabled {
+    cursor: not-allowed;
+  }
+
   :focus {
     outline: none;
     border: 1px solid var(--grey-0);
