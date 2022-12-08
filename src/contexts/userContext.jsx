@@ -20,7 +20,6 @@ export const UserProvider = ({ children }) => {
 
   const [addTech, setAddTech] = useState(false);
   const [user, setUser] = useState([]);
-  const [renderDashPage, setRenderDashPage] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -34,10 +33,8 @@ export const UserProvider = ({ children }) => {
         .catch((err) => {
           localStorage.clear();
         });
-      setRenderDashPage(true);
     } else {
       navigate("/login");
-      setRenderDashPage(false);
     }
   }, [addTech]);
 
@@ -98,6 +95,7 @@ export const UserProvider = ({ children }) => {
           },
           success: {
             render() {
+              reset();
               navigate("/login");
               return "Cadastro realizado com sucesso!";
             },
@@ -122,7 +120,6 @@ export const UserProvider = ({ children }) => {
         reset,
         local,
         user,
-        renderDashPage,
         addTech,
         setAddTech,
       }}

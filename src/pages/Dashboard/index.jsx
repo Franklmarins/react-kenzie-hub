@@ -8,17 +8,14 @@ import Modal from "../../components/Modal";
 import { TechContext } from "../../contexts/techContext";
 
 export const Dashboard = () => {
-  const { renderDashPage } = useContext(UserContext);
   const { showModal, typeModal } = useContext(TechContext);
 
-  if (renderDashPage) {
-    return (
-      <>
-        {showModal ? <Modal typeModal={typeModal} /> : null}
-        <Nav />
-        <Header />
-        <Main />
-      </>
-    );
-  }
+  return (
+    <>
+      {showModal ? <Modal typeModal={typeModal} /> : null}
+      <Nav />
+      <Header />
+      <Main />
+    </>
+  );
 };
