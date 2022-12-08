@@ -1,9 +1,9 @@
 import React from "react";
 import { StyledButton } from "./style";
 
-const Button = ({ type, buttonStyle, name, logOut }) => {
+const Button = ({ type, buttonStyle, name, onClick }) => {
   return (
-    <StyledButton onClick={logOut} type={type} buttonStyle={buttonStyle}>
+    <StyledButton onClick={onClick} type={type} buttonStyle={buttonStyle}>
       {name}
     </StyledButton>
   );

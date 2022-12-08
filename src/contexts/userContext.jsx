@@ -18,7 +18,7 @@ export const UserProvider = ({ children }) => {
   const local = useLocation();
   const navigate = useNavigate();
 
-  const [addTech, setAddTech] = useState("");
+  const [addTech, setAddTech] = useState(false);
   const [user, setUser] = useState([]);
   const [renderDashPage, setRenderDashPage] = useState(false);
 
@@ -123,6 +123,7 @@ export const UserProvider = ({ children }) => {
         local,
         user,
         renderDashPage,
+        addTech,
         setAddTech,
       }}
     >

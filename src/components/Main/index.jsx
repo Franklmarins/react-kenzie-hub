@@ -8,7 +8,7 @@ import { UserContext } from "../../contexts/userContext";
 import { StyledCardTech } from "../CardTech/style";
 
 const Main = () => {
-  const { addModal, setValue, deleteTech } = useContext(TechContext);
+  const { addModal, setValue } = useContext(TechContext);
   const { user } = useContext(UserContext);
 
   return (
@@ -21,24 +21,25 @@ const Main = () => {
               +
             </StyledButton>
           </div>
-          <ul>
-            {user.techs
-              ? user.techs.map((tech) => (
-                  <StyledCardTech
-                    onClick={(e) => {
-                      setValue("title", tech.title);
-                      setValue("status", tech.status);
-                      setValue("id", tech.id);
-                      return addModal(e);
-                    }}
-                    key={tech.id}
-                  >
-                    <h2>{tech.title}</h2>
-                    <span>{tech.status}</span>
-                  </StyledCardTech>
-                ))
-              : null}
-          </ul>
+
+          {user.techs.length > 0 ? (
+            <ul>
+              {user.techs.map((tech) => (
+                <StyledCardTech
+                  onClick={(e) => {
+                    setValue("title", tech.title);
+                    setValue("status", tech.status);
+                    localStorage.setItem("techId", tech.id);
+                    return addModal(e);
+                  }}
+                  key={tech.id}
+                >
+                  <h2>{tech.title}</h2>
+                  <span>{tech.status}</span>
+                </StyledCardTech>
+              ))}
+            </ul>
+          ) : null}
         </div>
       </Container>
     </StyledMain>

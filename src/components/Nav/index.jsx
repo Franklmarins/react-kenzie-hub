@@ -32,7 +32,7 @@ const Nav = () => {
         <div>
           <img src={logo} alt="kenzieHubLogo" />
           <Button
-            logOut={logOut}
+            onClick={() => logOut()}
             type="button"
             buttonStyle="medium-solid"
             name="sair"

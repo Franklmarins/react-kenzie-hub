@@ -8,7 +8,7 @@ export const App = () => {
       <GlobalStyle />
       <Routes />
       <ToastContainer
-        limit={1}
+        limit={0}
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}

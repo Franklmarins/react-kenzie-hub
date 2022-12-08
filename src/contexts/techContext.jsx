@@ -11,7 +11,7 @@ import { UserContext } from "./userContext";
 export const TechContext = createContext({});
 
 export const TechProvider = ({ children }) => {
-  const { setAddTech } = useContext(UserContext);
+  const { addTech, setAddTech } = useContext(UserContext);
   const [typeModal, setTypeModal] = useState("");
   const [showModal, setShowModal] = useState(false);
   const token = localStorage.getItem("token");
@@ -42,7 +42,7 @@ export const TechProvider = ({ children }) => {
         success: {
           render() {
             reset();
-            setAddTech("add");
+            setAddTech(!addTech);
             setShowModal(false);
             return "Tecnologia adicionada!";
           },
@@ -74,7 +74,7 @@ export const TechProvider = ({ children }) => {
         success: {
           render() {
             reset();
-            setAddTech("add");
+            setAddTech(!addTech);
             setShowModal(false);
             return "Tecnologia atualizada!";
           },
@@ -89,7 +89,6 @@ export const TechProvider = ({ children }) => {
   };
 
   const deleteTech = (id) => {
-    console.log(id);
     toast.promise(
       api
         .delete(`/users/techs/${id}`, {
@@ -106,7 +105,7 @@ export const TechProvider = ({ children }) => {
         },
         success: {
           render() {
-            setAddTech("add");
+            setAddTech(!addTech);
             setShowModal(false);
             return "Tecnologia excluida!";
           },
