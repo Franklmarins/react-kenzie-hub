@@ -22,7 +22,7 @@ const Main = () => {
             </StyledButton>
           </div>
 
-          {user.techs.length > 0 ? (
+          {user.techs ? (
             <ul>
               {user.techs.map((tech) => (
                 <StyledCardTech

@@ -15,6 +15,7 @@ export const StyledMain = styled.main`
     align-items: center;
     justify-content: space-between;
   }
+
   ul {
     display: flex;
     flex-direction: column;
